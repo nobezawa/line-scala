@@ -4,6 +4,7 @@ package controllers.generate
 import play.api._
 import play.api.mvc._
 import scala.slick.driver.MySQLDriver.simple._
+import scala.slick.codegen.SourceCodeGenerator
 
 object MysqlGenerate extends Controller{
 
@@ -16,10 +17,10 @@ object MysqlGenerate extends Controller{
     val pkg = "model"
     val user = "root"
     val password = ""
-    import scala.slick.model.codegen.SourceCodeGenerator
-    scala.slick.model.codegen.SourceCodeGenerator.main(
+    SourceCodeGenerator.main(
       Array(slickDriver, jdbcDriver, url, outputFolder, pkg, user, password)
     )
+    Redirect("localhost:9000")
   }
 
 }
