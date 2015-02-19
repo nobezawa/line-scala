@@ -14,5 +14,6 @@ libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick" % "2.1.0",
   "com.typesafe.slick" %% "slick-codegen" % "2.1.0",
   "com.typesafe.play" %% "play-slick" % "0.8.1",
+  "ws.securesocial" %% "securesocial" % "2.1.4",
   "org.slf4j" % "slf4j-nop" % "1.6.4"
 )
