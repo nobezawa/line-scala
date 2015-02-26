@@ -12,14 +12,14 @@ object ApplicationBuild extends Build {
     "com.typesafe.slick" %% "slick" % "2.1.0",
     "com.typesafe.slick" %% "slick-codegen" % "2.1.0",
     "com.typesafe.play" %% "play-slick" % "0.8.1",
-    "ws.securesocial" %% "securesocial" % "2.1.4",
+    "ws.securesocial" %% "securesocial" % "master-SNAPSHOT",
     "org.slf4j" % "slf4j-nop" % "1.6.4"
   )
 
   val main = Project(appName, file(".")).enablePlugins(play.PlayScala).settings(
     version := appVersion,
     scalaVersion := "2.11.4",
-    resolvers += Resolver.sonatypeRepo("releases"),
+    resolvers += Resolver.sonatypeRepo("snapshots"),
     libraryDependencies ++= appDependencies
   )
 
