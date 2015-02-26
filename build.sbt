@@ -1,19 +1,7 @@
 import play.PlayScala
+import AddSettings._
 
-name := """line-app"""
 
-version := "1.0-SNAPSHOT"
+resolvers += "sbtplugins" at "http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.4"
-
-libraryDependencies ++= Seq(
-  jdbc,
-  "mysql" % "mysql-connector-java" % "5.1.28",
-  "com.typesafe.slick" %% "slick" % "2.1.0",
-  "com.typesafe.slick" %% "slick-codegen" % "2.1.0",
-  "com.typesafe.play" %% "play-slick" % "0.8.1",
-  "ws.securesocial" %% "securesocial" % "2.1.4",
-  "org.slf4j" % "slf4j-nop" % "1.6.4"
-)
